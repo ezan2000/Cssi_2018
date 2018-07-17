@@ -36,7 +36,8 @@ let dogType = "poodle";
 // Complete Task 3 Below
 if(dogName == "corgi" || "beagle")
 {
-  `I will walk ${dogName} today at 12 pm`;
+  `I will walk ${dogName
+  } today at 12 pm`;
 }
 else if (dogName == "bulldog")
 {

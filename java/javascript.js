@@ -11,3 +11,9 @@ else
 {
 console.log("false");
 }
+
+function greet(name1, name2)
+{
+  console.log("hello world" + name1 + name2);
+}
+greet('Alice', 'Bob');
