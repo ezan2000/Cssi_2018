@@ -17,17 +17,32 @@ let dogName1 = "Steve";
 let dogType1 = "beagle";
 
 // Complete Task 1 Below
-
+console.log(`I will walk ${dogType1} today`);
 
 
 let dogName2 = "Joe";
-let dogType2 = "bulldog";
+let dogType2 = "corgi";
 
 // Complete Task 2 Below
-
+if(dogType2 == "corgi")
+{ console.log(`I will walk ${dogType2} at 12 pm today`);}
+else
+{console.log(`I will walk ${dogType2} at 1 pm today`);}
 
 
 let dogName = "Lola";
 let dogType = "poodle";
 
 // Complete Task 3 Below
+if(dogName == "corgi" || "beagle")
+{
+  `I will walk ${dogName} today at 12 pm`;
+}
+else if (dogName == "bulldog")
+{
+  `I will walk ${dogName} today at 1 pm`;
+}
+else
+{
+  `I will walk ${dogName} today at 2 pm`;
+}
