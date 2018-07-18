@@ -14,14 +14,38 @@
 
 let amusementParks = ["Disney World", "Hershey Park", "Six Flags", "Dorney Park", "Sea World"];
 //Complete task one below
-
+let parks = "";
+amusementParks.forEach((parks) =>
+console.log(`${parks} is a great amusement park!`)
+)
 
 
 
 let rollerCoasters = ["Big Thunder Mountain Railroad","Splash Mountain","Space Mountain", "Expedition Everest","The Twilight Zone Tower of Terror"];
 //Complete task two below
+for(let i =0; i < rollerCoasters.length; i++)
+{
+  if(rollerCoasters[i] != "Space Mountain")
+  {
+console.log(`I will ride ${rollerCoasters[i]}`)
+
+  }
+  else
+  {
+   break;
+  }
+}
 
 
 
 let height = 6;
 //Complete task three below
+
+
+while ( height > 4)
+{
+ console.log(`Next Customer ${height}`)
+ var number;
+ number = Math.floor(Math.random() * 20) + 3;
+ height = number;
+}

@@ -18,6 +18,7 @@ function greet(name1, name2)
   { return;
   }
 
+
 }
 greet('Alice', 'Bob');
 
@@ -29,3 +30,13 @@ setInterval(() => {
   // console.log(n)
   ;
 }, 1000); //every 1000 milliseconds execute function.
+const names  = ['Alice', 'Bob', 'Charlie', 'Deborah']
+for(let i = 0; i < names.length; i++)
+{
+  console.log(names[i]);
+
+}
+names.forEach((name)) =>
+{
+  console.log(`forEach: ${ name }`); 
+}
