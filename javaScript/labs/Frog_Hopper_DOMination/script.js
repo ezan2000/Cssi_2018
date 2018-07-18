@@ -14,12 +14,17 @@
 
 let currentlily = 1;
 
-let frogger = /*use a querySelector to grab your frog from your HTML*/;
+let frogger = document.querySelector('#frog');
 
-frogger.addEventListener(/* Insert type of event are we listening for */, function(){
+frogger.addEventListener('click', function(){
 // Insert what should happen when you click on the frog!
+console.log("hop!");
 
 
 
+});
+frogger.addEventListener('click', e=>{
+  frogger.style.left = "33.5%";
+  frogger.style.up = "15%"; 
 
 });

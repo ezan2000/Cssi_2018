@@ -23,7 +23,6 @@ balance = 0;
   enter = `${customer_name} has opened a new account with a balance of $` + balance;
   return enter;  //write the statment you need to return here
 }
-
 function deposit(customer_name, value = 0){
 balance = balance + value;
   // update the value of balance
@@ -40,8 +39,7 @@ function withdraw(customer_name, value = 0){
 
 print3 = `${customer_name}'s total balance is ` + balance;
 print4 = `${customer_name}'s has withdrawn ` + value;
-return print4;
-return print3;
+return print4 + print3;
   //return the correct statement
 }
 

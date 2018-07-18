@@ -22,10 +22,10 @@ function greet(name1, name2)
 greet('Alice', 'Bob');
 
 const multiplyBy3 =(x,y) => x *3;
-console.log(multiplyBy3(3));
+// console.log(multiplyBy3(3));
 let n = 0;
 setInterval(() => {
   n+= 1;
-  console.log(n)
+  // console.log(n)
   ;
 }, 1000); //every 1000 milliseconds execute function.
