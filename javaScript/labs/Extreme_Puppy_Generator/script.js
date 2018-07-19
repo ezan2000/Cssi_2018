@@ -23,10 +23,10 @@ console.log(url);
 
 const button = (document.querySelector('.button'));
 button.addEventListener('click', b => {
-  dataObject.dara.forEach((element) => {
+  dataObject.data.forEach((element) => {
 let url = element.images.original.url;
 const img = document.createElement('img');
-img.src = dataObject.data["0"].images.original.url;
+img.src = element.images.original.url;
 img.width = '200';
 img.height = '200';
 var element = document.getElementById('body');
