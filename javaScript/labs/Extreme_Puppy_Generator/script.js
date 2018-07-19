@@ -11,5 +11,33 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
+let dogs = 0;
 console.log(dataObject);
+dataObject.data.forEach((element) =>  {
+let url = element.images.original.url;
+console.log(url);
+
+}
+
+)
+
+const button = (document.querySelector('.button'));
+button.addEventListener('click', b => {
+  dataObject.dara.forEach((element) => {
+let url = element.images.original.url;
+const img = document.createElement('img');
+img.src = dataObject.data["0"].images.original.url;
+img.width = '200';
+img.height = '200';
+var element = document.getElementById('body');
+element.append(img);
+  }
+)
+  // console.log(dataObject.data["0"].url);
+  // const img = document.createElement('img');
+  // img.src = dataObject.data["0"].images.original.url;
+  // img.width = '200';
+  // img.height = '200';
+  // var element = document.getElementById('body');
+  // element.append(img);
+})

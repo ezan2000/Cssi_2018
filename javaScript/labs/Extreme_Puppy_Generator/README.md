@@ -27,7 +27,7 @@ console.log(dataObject);
 
 3. Once you have that working, use a forEach loop so that clicking on the button results in all 10 dog gifs being printed. Think carefully about what array you want to loop through and how to access that from dataObject. You'll need to create a new element for each gif and set the src to the correct link each time. Set the height and width of each gif to be 200px. Give each of these images a class of "gif".
 
-4. Add to the task you completed above by making the title of each gif appear as well.
+4. Add to the task you complet ed above by making the title of each gif appear as well.
 
 5. Create a new button, when you click on this button select all elements on the page with the class "gif" and delete them.
 

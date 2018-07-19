@@ -16,6 +16,7 @@ function greet(name1, name2)
 {
   if(name1[0] !== 'A');
   { return;
+
   }
 
 
@@ -36,7 +37,50 @@ for(let i = 0; i < names.length; i++)
   console.log(names[i]);
 
 }
-names.forEach((name)) =>
-{
-  console.log(`forEach: ${ name }`); 
+
+const article = {
+  name: 'Doggo has 10 new puppers',
+  view: 1234,
+  datePub: "B00M",
+  author: {
+    // name: "joe"
+    // title: "big"
+
+  },
+  editors: {
+
+  }
 }
+
+  console.log(article) ;
+  document.addEventListener('DOMContentLoaded', () => {
+
+
+  const floatingBox = document.querySelector('.floatingBox') ;
+  let boxTop = 100;
+  let boxLeft =100;
+
+  document.addEventListener('keydown', (event) => {
+
+    const key = event.key;
+
+    if( key === 'ArrowDown'){
+      boxTop -= 5;
+    }
+    else if(key === 'ArrowLeft'){
+      boxTop -= 5;
+    }
+    else if(key === 'ArrowRight'){
+      boxLeft -=5;
+
+    }else if (key === 'ArrowUp') {
+      boxTop += 5;
+    }
+    else {
+      return;
+    }
+    floatingBox.style.top =boxTop + 'px';
+    floatingBox.style.left = boxLeft + 'px';
+        console.log(event);
+  })
+}) 
