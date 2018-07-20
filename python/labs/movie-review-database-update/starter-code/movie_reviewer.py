@@ -23,9 +23,32 @@ inside_movie = {
     "out_of": 10,
     "reviews": 463787
 }
+inside_movie["year_released"] = 2015
+inside_movie["score"] = 8.2
+inside_movie["reviews"] = 1453
+inside_movie.pop('out_of')
+
+inside_movie["genres: "] = lis = ['animation','adventure','comedy']
+
+game = {
+'year_released': 2014,
+'rating': 'PG-13',
+'score': 8,
+'reviews': 1158,
+}
+
+bean = {
+'year_released': 1997,
+'rating': 'PG',
+'score': 6.4,
+'reviews': 245
+}
+print inside_movie
+
+big = [bean, game, inside_movie]
+
 
 # Do not edit the code above!
 
 # Write your code below to update the information in accordance with its
 # IMDB page: http://www.imdb.com/title/tt2096673/
-
