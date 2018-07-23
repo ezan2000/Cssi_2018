@@ -17,4 +17,20 @@
 # Replace "pass" with your code
 
 class BankAccount(object):
+    def __init__(self, label, balance):
+        self.label = label
+        self.balance = balance
+    def __str__(self):
+        print(self.label)
+        print(self.balance)
+        return(self.label + ' ' + str(self.balance))
+    def withdraw(self, pay):
+        self.withdraw = pay
+        if(pay < 0):
+            pay = 0 
+
+        self.balance = self.balance - self.withdraw
+    def deposit(label, balance):
+        self.label = "new label"
+
     pass
