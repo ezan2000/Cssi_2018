@@ -2,6 +2,9 @@ runtime: python27 #use python ver 2.7 to run
 api_version: 1  #api version you are talking with
 threadsafe: true
 
+libraries:
+  - name: jinja2
+    version: latest
 handlers: # controller. If put in url then run the app
 - url: /.*
   script: mainMeme.app
