@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> Welcome! </title>
+    <title> BIGGG BOII </title>
   </head>
   <body>
 
     <h1> Meme Generator </h1>
-    <img height = '150px' width = '150px' src="https://i.kym-cdn.com/photos/images/facebook/001/217/729/f9a.jpg">
+    <img height = '200px' width = '200px' src="{{memeDict['url']}}">
     <h2> Welcome to Meme Generator </h2>
+    <h3> Refresh for a new meme! </h3>
 
     <form method = POST action= '/memeresult'>
-      Line1 of meme:<br>
-      <input type = 'text' name='user-first-ln' value='First line of meme'><br>
+      <input type ='hidden' name = 'hidden' value = '{{memeDict['id']}}'>
+      Line1 of meme: <br>
+      <input type = 'text' name='user-first-ln' value='First line of meme' ><br>
       Line2 of meme: <br>
-      <input type = 'text' name='user-second-ln' value = 'Second line of meme'>
+      <input type = 'text' name='user-second-ln' value = 'Second line of meme' >
+
       <select name = 'meme-type'>
           <option value= "college-grad"> Happy College Grad </option>
           <option value = "thinking-ape"> Deep Thought Monkey</option>

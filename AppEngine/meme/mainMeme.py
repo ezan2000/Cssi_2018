@@ -27,9 +27,6 @@ class memeTemp(webapp2.RequestHandler):
     def get(self):
 
         link = 'https://api.imgflip.com/get_memes'
-        capLink = 'https://api.imgflip.com/caption_image'
-
-
 
         result = urlfetch.fetch(link)
         results  = json.loads(result.content)
@@ -37,8 +34,19 @@ class memeTemp(webapp2.RequestHandler):
         memeDict = {}
         memeDict = random.choice(results['data']['memes'])
         capId = memeDict['id']
+
+        template = templateEnv.get_template("templates/meme.html")
+
+        self.response.write(template.render({'memeDict': memeDict}))
+        # self.response.write("<img src = {url}> ".format(url = pic))
+
+    def post(self):
+
+        capLink = 'https://api.imgflip.com/caption_image'
+
+
         capDict = {
-            'template_id': capId,
+            'template_id': self.request.get('hidden'),
             'username':  'SolaireOfAstoraOfTheSun',
             'password': 'praisethesun',
             'text0':self.request.get('user-first-ln'),
@@ -52,22 +60,19 @@ class memeTemp(webapp2.RequestHandler):
             )
 
         picDict = json.loads(caption.content)
-        self.response.write(picDict)
+        #self.response.write(picDict)
 
-        pic = picDict['data']['url']
-        self.response.write("<img src = {url}> ".format(url = pic))
-        self.response.write(pic)
+        memeDict = picDict['data']
 
-        template = templateEnv.get_template("templates/meme.html")
+        #self.response.write(pic)
 
-        self.response.write(template.render())
-        self.response.write("<img src = {url}> ".format(url = pic))
-
-    def post(self) :
         user1 = self.request.get('user-first-ln')
         user2 = self.request.get('user-second-ln')
         meme = self.request.get('meme-type')
-        self.response.write("my post Handler - {m} {u1} {u2}".format(m=meme,u1=user1,u2=user2))
+        template = templateEnv.get_template("templates/meme.html")
+
+        self.response.write(template.render({'memeDict': memeDict}))
+        #self.response.write("my post Handler - {m} {u1} {u2}".format(m=meme,u1=user1,u2=user2))
 
         #recipeBrowser(webapp2.RequestHandler):
 #     def get(self):
